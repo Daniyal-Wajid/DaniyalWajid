@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/DaniyalWajid/static/css/main.99e92626.css",
+    "main.js": "/DaniyalWajid/static/js/main.ee5c4116.js",
+    "static/media/Daniyal.png": "/DaniyalWajid/static/media/Daniyal.0f9868bde8a8550a6f88.png",
+    "static/media/sun.png": "/DaniyalWajid/static/media/sun.fe504384baabdfe2a2ca.png",
+    "static/media/moon.png": "/DaniyalWajid/static/media/moon.c7c4d4f9b3c6fce8ec1e.png",
+    "static/media/menu.png": "/DaniyalWajid/static/media/menu.2064cb88304aff3d0761.png",
+    "static/media/linkedin.png": "/DaniyalWajid/static/media/linkedin.63b96b9ea7fdfd7a5ee0.png",
+    "index.html": "/DaniyalWajid/index.html",
+    "main.99e92626.css.map": "/DaniyalWajid/static/css/main.99e92626.css.map",
+    "main.ee5c4116.js.map": "/DaniyalWajid/static/js/main.ee5c4116.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99e92626.css",
+    "static/js/main.ee5c4116.js"
+  ]
+}
