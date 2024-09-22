@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/DaniyalWajid/static/css/main.36b1b321.css",
-    "main.js": "/DaniyalWajid/static/js/main.1d5adc9c.js",
+    "main.css": "/DaniyalWajid/static/css/main.db8a72b8.css",
+    "main.js": "/DaniyalWajid/static/js/main.23979920.js",
     "static/media/Daniyal.png": "/DaniyalWajid/static/media/Daniyal.0f9868bde8a8550a6f88.png",
+    "static/media/backend.png": "/DaniyalWajid/static/media/backend.67d82cd9e544c38ff7ee.png",
     "static/media/sun.png": "/DaniyalWajid/static/media/sun.fe504384baabdfe2a2ca.png",
+    "static/media/fullstack.png": "/DaniyalWajid/static/media/fullstack.202ccdbddd85a945635c.png",
     "static/media/moon.png": "/DaniyalWajid/static/media/moon.c7c4d4f9b3c6fce8ec1e.png",
     "static/media/menu.png": "/DaniyalWajid/static/media/menu.2064cb88304aff3d0761.png",
     "static/media/linkedin.png": "/DaniyalWajid/static/media/linkedin.822be320d97b6cb86bf6.png",
@@ -12,11 +14,11 @@
     "static/media/slick.ttf": "/DaniyalWajid/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/DaniyalWajid/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/DaniyalWajid/index.html",
-    "main.36b1b321.css.map": "/DaniyalWajid/static/css/main.36b1b321.css.map",
-    "main.1d5adc9c.js.map": "/DaniyalWajid/static/js/main.1d5adc9c.js.map"
+    "main.db8a72b8.css.map": "/DaniyalWajid/static/css/main.db8a72b8.css.map",
+    "main.23979920.js.map": "/DaniyalWajid/static/js/main.23979920.js.map"
   },
   "entrypoints": [
-    "static/css/main.36b1b321.css",
-    "static/js/main.1d5adc9c.js"
+    "static/css/main.db8a72b8.css",
+    "static/js/main.23979920.js"
   ]
 }
