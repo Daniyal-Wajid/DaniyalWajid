@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Nav from './components/Nav';
 import { initializeCursor } from './cursor';
 import Services from './components/Services';
+import Skills from './components/Skills';
 
 function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -29,6 +30,7 @@ function App() {
             <Nav isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
             <Header />
             <Services />
+            <Skills />
         </div>
     );
 }
