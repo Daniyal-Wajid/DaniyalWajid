@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         <div className='subtitle'>I'm a Web Developer</div>
         <div className='additional-info'>
-          From France, Paris. I have rich experience in web design, also I am good at WordPress. I love to talk with you about our unique.
+        From Lahore, Pakistan: MERN Stack Developer with Rich Web Design Experience Ready to Collaborate on Unique Projects!
         </div>
         <div className='social-links'>
           <a href="https://www.linkedin.com/in/yourprofile" className='social-link' target="_blank" rel="noopener noreferrer">

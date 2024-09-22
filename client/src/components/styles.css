@@ -205,7 +205,7 @@ body {
     font-family: 'Arial', sans-serif;
     font-size: 18px;
     color: var(--text-color);
-    margin-top: 10px;
+    margin-top: 40px;
     line-height: 1.5;
     max-width: 600px;
 }
@@ -213,7 +213,8 @@ body {
 .social-links {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .social-link img {
@@ -235,7 +236,7 @@ body {
 .button {
     background-color: transparent;
     color: #6A9C89;
-    border: 2px solid #6A9C89;
+    border: 2px solid black;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
@@ -281,3 +282,59 @@ body {
     color: #6A9C89;
     border: none;
 }
+
+
+.Service-Heading{
+    font-size: 30px;
+}
+
+.service-heading {
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+  
+  .service-subheading {
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 1.5s ease, transform 1.5s ease; /* Transition for smooth appearance */
+  }
+  
+  .fade-in {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+  }
+  
+  
+  .card-heading {
+    padding-bottom: 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .card-subheading {
+    padding: 0px 20px 20px 0px;
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  .card-text {
+    font-size: 1em;
+    color: #333;
+  }
