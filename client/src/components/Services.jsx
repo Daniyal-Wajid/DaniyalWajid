@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import ServiceCard from './ServiceCard';
 import './styles.css';
@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Services = () => {
+  const [headingVisible, setHeadingVisible] = useState(false);
+  const [subheadingVisible, setSubheadingVisible] = useState(false);
+
   const cardData = [
     {
       heading: 'Web Development',
@@ -21,21 +24,46 @@ const Services = () => {
       heading: 'UI/UX Design',
       subheading: 'Intuitive Designs',
       text: 'I design visually appealing and user-centric interfaces.'
-    }
+    },
+    {
+        heading: 'UI/UX Design',
+        subheading: 'Intuitive Designs',
+        text: 'I design visually appealing and user-centric interfaces.'
+      }
   ];
 
   const settings = {
     dots: true,
     infinite: true,
+    autoplay:true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    arrows: false, // Disable next and previous arrows
   };
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const headingPosition = document.querySelector('.service-heading').getBoundingClientRect().top;
+      const subheadingPosition = document.querySelector('.service-subheading').getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (headingPosition < windowHeight) {
+        setHeadingVisible(true);
+      }
+      if (subheadingPosition < windowHeight) {
+        setSubheadingVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div>
-      <div className='service-heading'>What I Do</div>
-      <div className='service-subheading'>My Services</div>
+      <div className={`service-heading ${headingVisible ? 'fade-in' : ''}`}>What I Do</div>
+      <div className={`service-subheading ${subheadingVisible ? 'fade-in' : ''}`}>My Services</div>
       
       <div className="slider-container">
         <Slider {...settings}>
