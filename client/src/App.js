@@ -5,6 +5,8 @@ import Nav from './components/Nav';
 import { initializeCursor } from './cursor';
 import Services from './components/Services';
 import Skills from './components/Skills';
+import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
 
 function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -31,6 +33,8 @@ function App() {
             <Header />
             <Services />
             <Skills />
+            <Portfolio />
+            <Resume />
         </div>
     );
 }
