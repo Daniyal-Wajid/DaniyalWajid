@@ -7,6 +7,10 @@ import Services from './components/Services';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
+import Pricing from './components/Pricing';
+import Achievements from './components/Achievements';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -35,6 +39,10 @@ function App() {
             <Skills />
             <Portfolio />
             <Resume />
+            <Pricing />
+            <Achievements />
+            <Contact />
+            <Footer />
         </div>
     );
 }

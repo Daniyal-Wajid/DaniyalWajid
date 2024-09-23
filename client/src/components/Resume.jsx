@@ -28,6 +28,7 @@ const Resume = () => {
 
   const educationData = [
     { name: 'Bachelor of Science in Computer Science', details: 'XYZ University, 2016-2020' },
+    { name: 'Bachelor of Science in Computer Science', details: 'XYZ University, 2016-2020' },
     { name: 'Master of Science in Software Engineering', details: 'ABC University, 2020-2022' },
   ];
 

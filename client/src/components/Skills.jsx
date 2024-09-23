@@ -23,7 +23,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <div ref={skillsRef} className="skills-container">
+    <div id='skills' ref={skillsRef} className="skills-container">
       <div className={`skills-heading ${isVisible ? 'fade-in' : ''}`}>Professional Skills</div>
       <div className={`skills-subheading ${isVisible ? 'fade-in' : ''}`}>My Talent</div>
       <div className="skills-wrapper">

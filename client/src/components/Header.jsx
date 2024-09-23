@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         <div className='subtitle'>I'm a Web Developer</div>
         <div className='additional-info'>
-        From Lahore, Pakistan: MERN Stack Developer with Rich Web Design Experience Ready to Collaborate on Unique Projects!
+          From Lahore, Pakistan: MERN Stack Developer with Rich Web Design Experience Ready to Collaborate on Unique Projects!
         </div>
         <div className='social-links'>
           <a href="https://www.linkedin.com/in/yourprofile" className='social-link' target="_blank" rel="noopener noreferrer">
@@ -28,13 +28,21 @@ const Header = () => {
           <a href="https://github.com/yourprofile" className='social-link' target="_blank" rel="noopener noreferrer">
             <img src={GitHubIcon} alt="GitHub" />
           </a>
-          <a href="https://twitter.com/yourprofile" className='social-link' target="_blank" rel="noopener noreferrer">
-            <img src={InstagramIcon} alt="Twitter" />
+          <a href="https://instagram.com/yourprofile" className='social-link' target="_blank" rel="noopener noreferrer">
+            <img src={InstagramIcon} alt="Instagram" />
           </a>
         </div>
         <div className='button-container'>
           <a href="/path-to-cv" className='button download-cv' download>Download CV</a>
-          <a href="/skills" className='button my-skills'>My Skills</a>
+          <button className='button my-skills'
+            onClick={() => {
+              const skillsSection = document.getElementById('skills');
+              if (skillsSection) {
+                skillsSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}>
+            My Skills
+          </button>
         </div>
       </div>
       <div className='img-container'>
