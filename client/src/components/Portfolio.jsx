@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PortfolioCard from './PortfolioCard'; 
+import orbiqe from "../assets/portfolio/logo.png"
+import Rizzq from "../assets/portfolio/rizzq.png"
 import './styles.css';
 
 const Portfolio = () => {
@@ -8,13 +10,44 @@ const Portfolio = () => {
   const [cardsVisible, setCardsVisible] = useState(Array(6).fill(false));
 
   const portfolioData = [
-    { title: 'Project One', description: 'An amazing project that does X.', link: 'https://linktoyourproject1.com' },
-    { title: 'Project Two', description: 'A groundbreaking project that achieves Y.', link: 'https://linktoyourproject2.com' },
-    { title: 'Project Three', description: 'An innovative solution for Z.', link: 'https://linktoyourproject3.com' },
-    { title: 'Project Four', description: 'A captivating project that does A.', link: 'https://linktoyourproject4.com' },
-    { title: 'Project Five', description: 'An exciting project that accomplishes B.', link: 'https://linktoyourproject5.com' },
-    { title: 'Project Six', description: 'A revolutionary project that achieves C.', link: 'https://linktoyourproject6.com' },
+    { 
+      title: 'Orbiqe Technologies', 
+      description: 'A leading company specializing in electrification solutions for sustainable energy, focusing on innovative technologies to power the future.', 
+      link: 'https://linktoyourproject1.com',
+      image: orbiqe
+    },
+    { 
+      title: 'HUD Electronet', 
+      description: 'A groundbreaking project that provides smart electrification solutions for urban transportation, enhancing efficiency and sustainability.', 
+      link: 'https://linktoyourproject2.com',
+      image: 'https://linktoimage2.com/image.jpg'
+    },
+    { 
+      title: 'RIZZQ - Job Portal', 
+      description: 'A revolutionary platform connecting job seekers with employers, designed to streamline the hiring process with advanced matching algorithms.', 
+      link: 'https://linktoyourproject6.com',
+      image: Rizzq
+    },
+    { 
+      title: 'Google Keeps Clone', 
+      description: 'An innovative solution for organizing notes and tasks, inspired by Google Keep, featuring a user-friendly interface and enhanced functionality.', 
+      link: 'https://linktoyourproject3.com',
+      image: 'https://linktoimage3.com/image.jpg'
+    },
+    { 
+      title: 'FiveWorks Dispatching Services', 
+      description: 'An exciting project that optimizes dispatching operations for logistics companies, enhancing efficiency and reducing operational costs.', 
+      link: 'https://linktoyourproject5.com',
+      image: 'https://linktoimage5.com/image.jpg'
+    },
+    { 
+      title: 'ToDo List', 
+      description: 'A captivating project that helps users manage their tasks effectively with features like deadlines, reminders, and priority settings.', 
+      link: 'https://linktoyourproject4.com',
+      image: 'https://linktoimage6.com/image.jpg'
+    },
   ];
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,12 +83,13 @@ const Portfolio = () => {
       <div className="portfolio-grid">
         {portfolioData.map((item, index) => (
           <PortfolioCard
-            key={index}
-            className={`portfolio-card-${index} ${cardsVisible[index] ? 'fade-in' : ''}`}
-            title={item.title}
-            description={item.description}
-            link={item.link}
-          />
+          key={index}
+          className={`portfolio-card-${index} ${cardsVisible[index] ? 'fade-in' : ''}`}
+          title={item.title}
+          description={item.description}
+          link={item.link}
+          image={item.image} // Make sure this line is included
+        />        
         ))}
       </div>
     </div>

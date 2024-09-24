@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import ServiceCard from './ServiceCard';
-import front from "../assets/frontend.png"
-import back from "../assets/backend.png"
-import full from "../assets/fullstack.png"
+import front from "../assets/services/frontend.png"
+import back from "../assets/services/backend.png"
+import full from "../assets/services/fullstack.png"
 import './styles.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";

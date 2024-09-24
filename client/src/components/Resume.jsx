@@ -27,15 +27,31 @@ const Resume = () => {
   }, []);
 
   const educationData = [
-    { name: 'Bachelor of Science in Computer Science', details: 'XYZ University, 2016-2020' },
-    { name: 'Bachelor of Science in Computer Science', details: 'XYZ University, 2016-2020' },
-    { name: 'Master of Science in Software Engineering', details: 'ABC University, 2020-2022' },
+    { 
+      name: 'Bachelor of Science in Software Engineering', 
+      details: 'Riphah International University, Lahore | 2022 - Present\nKey Courses: Data Structures and Algorithms, Web Development, Database Systems, Software Testing' 
+    },
+    { 
+      name: 'Intermediate in Science', 
+      details: 'Pak-Turk College, Lahore | 2020 - 2022\nFocus: Mathematics, Computer Science, and Physics' 
+    },
+    { 
+      name: 'Relevant Coursework', 
+      details: 'Courses Taken:\n- Web Development Bootcamp by Angela Yu\n- 100 Days of Python by Angela Yu\n- Introduction to JavaScript by Meta' 
+    },
   ];
-
+    
   const experienceData = [
-    { title: 'Software Developer', details: 'Company A, 2020-Present' },
-    { title: 'Intern', details: 'Company B, Summer 2019' },
+    { 
+      title: 'Freelance MERN Stack Developer', 
+      details: 'Developed multiple full-stack web applications for various clients, focusing on responsive design and performance optimization.\nKey Projects: Business Websites for multiple clients.' 
+    },
+    { 
+      title: 'Personal Projects', 
+      details: 'Created several personal projects to enhance skills in React, Node.js, and MongoDB, including a task management app and a portfolio website.' 
+    },
   ];
+  
 
   const toggleDetails = (type, index) => {
     setExpandedIndex(prev => {
