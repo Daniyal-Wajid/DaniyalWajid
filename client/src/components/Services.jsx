@@ -17,36 +17,52 @@ const Services = () => {
       heading: 'Web Development',
       subheading: 'Build Responsive Websites',
       text: 'I create responsive and functional websites using the latest technologies.',
-      img:front
+      img: front
     },
     {
       heading: 'Mobile Apps',
       subheading: 'Engaging Mobile Experiences',
       text: 'I develop user-friendly mobile applications for both iOS and Android.',
-      img:back
+      img: back
     },
     {
       heading: 'UI/UX Design',
       subheading: 'Intuitive Designs',
       text: 'I design visually appealing and user-centric interfaces.',
-      img:full
+      img: full
     },
     {
-        heading: 'UI/UX Design',
-        subheading: 'Intuitive Designs',
-        text: 'I design visually appealing and user-centric interfaces.',
-        img:front
-      }
+      heading: 'UI/UX Design',
+      subheading: 'Intuitive Designs',
+      text: 'I design visually appealing and user-centric interfaces.',
+      img: front
+    }
   ];
 
   const settings = {
     dots: true,
     infinite: true,
-    autoplay:true,
+    autoplay: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: false, 
+    slidesToShow: 3, // Default for mobile
+    slidesToScroll: 1, // Default for mobile
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768, // Tablet breakpoint
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480, // Mobile breakpoint
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   
   useEffect(() => {

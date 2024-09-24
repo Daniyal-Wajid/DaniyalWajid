@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Daniyal from '../assets/Daniyal.png';
 import LinkedInIcon from '../assets/linkedin.png';
@@ -6,6 +6,19 @@ import GitHubIcon from '../assets/github.png';
 import InstagramIcon from '../assets/instagram.png';
 
 const Header = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className="Header">
       <div className='name'>
@@ -18,6 +31,13 @@ const Header = () => {
           <span className='Heading-name-2'>WAJID</span>
         </div>
         <div className='subtitle'>I'm a Web Developer</div>
+        {isMobile && (
+          <div className='img-container'>
+            <div className='img-circle'>
+              <img src={Daniyal} alt="Daniyal" />
+            </div>
+          </div>
+        )}
         <div className='additional-info'>
           From Lahore, Pakistan: MERN Stack Developer with Rich Web Design Experience Ready to Collaborate on Unique Projects!
         </div>
@@ -45,11 +65,13 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className='img-container'>
-        <div className='img-circle'>
-          <img src={Daniyal} alt="Daniyal" />
+      {!isMobile && (
+        <div className='img-container'>
+          <div className='img-circle'>
+            <img src={Daniyal} alt="Daniyal" />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

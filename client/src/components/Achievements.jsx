@@ -14,7 +14,7 @@ const Achievements = () => {
       if (achievementsPosition < windowHeight) {
         setHeadingVisible(true);
         setSubheadingVisible(true);
-        setCardsVisible(true); // Show cards on scroll
+        setCardsVisible(true); 
       }
     };
 

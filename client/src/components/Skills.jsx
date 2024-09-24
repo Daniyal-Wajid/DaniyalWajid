@@ -36,7 +36,7 @@ const Skills = () => {
         <Skill name="MongoDB" percentage={75} description="NoSQL database for storing data in JSON-like format." />
         <Skill name="SQL" percentage={70} description="Language for managing and querying relational databases." />
         <Skill name="Python" percentage={75} description="Versatile programming language used in web development and data analysis." />
-        <Skill name="Java" percentage={70} description="Object-oriented programming language used for building cross-platform applications." />
+        <Skill name="Java" percentage={70} description="OO programming language used for building cross-platform applications." />
         <Skill name="C++" percentage={65} description="General-purpose programming language for system/software development." />
         <Skill name="Bootstrap" percentage={80} description="Front-end framework for developing responsive web designs." />
       </div>
