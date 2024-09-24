@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DaniyalWajid/static/css/main.f0131d64.css",
-    "main.js": "/DaniyalWajid/static/js/main.67575d7a.js",
+    "main.css": "/DaniyalWajid/static/css/main.82e173c4.css",
+    "main.js": "/DaniyalWajid/static/js/main.3529c9eb.js",
     "static/media/Daniyal.png": "/DaniyalWajid/static/media/Daniyal.0f9868bde8a8550a6f88.png",
     "static/media/backend.png": "/DaniyalWajid/static/media/backend.67d82cd9e544c38ff7ee.png",
     "static/media/sun.png": "/DaniyalWajid/static/media/sun.fe504384baabdfe2a2ca.png",
@@ -14,11 +14,11 @@
     "static/media/slick.ttf": "/DaniyalWajid/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/DaniyalWajid/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/DaniyalWajid/index.html",
-    "main.f0131d64.css.map": "/DaniyalWajid/static/css/main.f0131d64.css.map",
-    "main.67575d7a.js.map": "/DaniyalWajid/static/js/main.67575d7a.js.map"
+    "main.82e173c4.css.map": "/DaniyalWajid/static/css/main.82e173c4.css.map",
+    "main.3529c9eb.js.map": "/DaniyalWajid/static/js/main.3529c9eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0131d64.css",
-    "static/js/main.67575d7a.js"
+    "static/css/main.82e173c4.css",
+    "static/js/main.3529c9eb.js"
   ]
 }
