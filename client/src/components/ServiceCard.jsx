@@ -21,17 +21,23 @@ const ServiceCard = ({ heading, subheading, text, img }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handlePricingClick = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div
-      ref={cardRef}
-      className={`card ${isVisible ? 'fade-in' : ''}`}
-    >
+    <div ref={cardRef} className={`card ${isVisible ? 'fade-in' : ''}`}>
       <div className="card-heading">{heading}</div>
       <div className="card-subheading">{subheading}</div>
       <div className="card-text">{text}</div>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <div className='card-btn'>
-          <button className="no-border-button">See Price</button>
+          <button className="no-border-button" onClick={handlePricingClick}>
+            See Pricing
+          </button>
         </div>
         <div className='card-img'>
           <img src={img} alt={heading} />

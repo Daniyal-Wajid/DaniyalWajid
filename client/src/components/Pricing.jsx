@@ -30,7 +30,7 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="pricing-container">
+    <div id='pricing' className="pricing-container">
       <h2 className={`pricing-heading ${cardsVisible ? 'fade-in' : ''}`}>Pricing Plans</h2>
       <div className={`pricing-subheading ${subheadingVisible ? 'fade-in' : ''}`}>My Services</div>
       <div className={`cards ${cardsVisible ? 'fade-in' : ''}`}>

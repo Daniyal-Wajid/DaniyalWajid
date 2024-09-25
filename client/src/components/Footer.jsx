@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="social-links">
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a  href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
             <img src={LinkedInIcon} alt="LinkedIn" />
           </a>
           <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
@@ -19,9 +19,9 @@ const Footer = () => {
             <img src={InstagramIcon} alt="Instagram" />
           </a>
         </div>
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <p className='text-footer'>&copy; 2024 Your Company. All rights reserved.</p>
         <div className="developer-info">
-          <p>Developed by Daniyal Wajid</p>
+          <p className='text-footer'>Developed by Daniyal Wajid</p>
         </div>
       </div>
     </footer>

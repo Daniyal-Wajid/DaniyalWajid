@@ -32,7 +32,7 @@ const Contact = () => {
             <span className="icon">📍</span>
             <div>
               <h3>Address</h3>
-              <p>North Tower, Toronto, Canada</p>
+              <p>Wapda Town, Lahore, Pakistan</p>
             </div>
           </div>
           <div className="detail-item">
@@ -46,14 +46,14 @@ const Contact = () => {
             <span className="icon">✉️</span>
             <div>
               <h3>Email</h3>
-              <p>zoe.miller@mydomain.com</p>
+              <p>daniyalwajid94@gmail.com</p>
             </div>
           </div>
           <div className="detail-item">
             <span className="icon">📞</span>
             <div>
               <h3>Phone</h3>
-              <p>+1 900 - 900 - 9000</p>
+              <p>+92 309-1840367</p>
             </div>
           </div>
         </div>

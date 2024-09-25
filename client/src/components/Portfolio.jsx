@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import PortfolioCard from './PortfolioCard'; 
 import orbiqe from "../assets/portfolio/logo.png"
 import Rizzq from "../assets/portfolio/rizzq.png"
+import Keeper from "../assets/portfolio/Keeper.png"
+import FiveWorks from "../assets/portfolio/fiveworks.png"
+import Todo from "../assets/portfolio/todo.png"
 import './styles.css';
 
 const Portfolio = () => {
@@ -32,19 +35,19 @@ const Portfolio = () => {
       title: 'Google Keeps Clone', 
       description: 'An innovative solution for organizing notes and tasks, inspired by Google Keep, featuring a user-friendly interface and enhanced functionality.', 
       link: 'https://linktoyourproject3.com',
-      image: 'https://linktoimage3.com/image.jpg'
+      image: Keeper
     },
     { 
       title: 'FiveWorks Dispatching Services', 
       description: 'An exciting project that optimizes dispatching operations for logistics companies, enhancing efficiency and reducing operational costs.', 
       link: 'https://linktoyourproject5.com',
-      image: 'https://linktoimage5.com/image.jpg'
+      image: FiveWorks
     },
     { 
       title: 'ToDo List', 
       description: 'A captivating project that helps users manage their tasks effectively with features like deadlines, reminders, and priority settings.', 
       link: 'https://linktoyourproject4.com',
-      image: 'https://linktoimage6.com/image.jpg'
+      image: Todo
     },
   ];
   
@@ -77,7 +80,7 @@ const Portfolio = () => {
 
   return (
     <div>
-      <div className={`portfolio-heading ${headingVisible ? 'fade-in' : ''}`}>My Portfolio</div>
+      <div style={{marginTop:"100px"}} className={`portfolio-heading ${headingVisible ? 'fade-in' : ''}`}>My Portfolio</div>
       <div className={`portfolio-subheading ${subheadingVisible ? 'fade-in' : ''}`}>Recent Work</div>
 
       <div className="portfolio-grid">

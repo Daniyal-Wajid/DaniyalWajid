@@ -4,6 +4,7 @@ import ServiceCard from './ServiceCard';
 import front from "../assets/services/frontend.png"
 import back from "../assets/services/backend.png"
 import full from "../assets/services/fullstack.png"
+import ux from "../assets/services/ux.png"
 import './styles.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -15,29 +16,30 @@ const Services = () => {
   const cardData = [
     {
       heading: 'Web Development',
-      subheading: 'Build Responsive Websites',
-      text: 'I create responsive and functional websites using the latest technologies.',
+      subheading: 'Beautiful Frontends',
+      text: 'I specialize in creating responsive and visually stunning websites that provide an exceptional user experience, ensuring that your brand stands out online.',
       img: front
     },
     {
-      heading: 'Mobile Apps',
-      subheading: 'Engaging Mobile Experiences',
-      text: 'I develop user-friendly mobile applications for both iOS and Android.',
+      heading: 'Web Development',
+      subheading: 'Robust Backends',
+      text: 'I build powerful backend systems that ensure seamless performance, security, and scalability, enabling your applications to handle any user demand efficiently.',
       img: back
     },
     {
-      heading: 'UI/UX Design',
-      subheading: 'Intuitive Designs',
-      text: 'I design visually appealing and user-centric interfaces.',
+      heading: 'Web Development',
+      subheading: 'Full-Stack Solutions',
+      text: 'From concept to deployment, I deliver comprehensive full-stack web solutions that integrate both frontend and backend technologies for a cohesive user experience.',
       img: full
     },
     {
       heading: 'UI/UX Design',
       subheading: 'Intuitive Designs',
-      text: 'I design visually appealing and user-centric interfaces.',
-      img: front
+      text: 'I create intuitive and engaging user interfaces that enhance usability and improve user satisfaction, making your digital products easy to navigate and delightful to use.',
+      img: ux
     }
   ];
+  
 
   const settings = {
     dots: true,

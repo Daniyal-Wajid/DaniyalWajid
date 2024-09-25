@@ -7,76 +7,117 @@ body {
 }
 
 :root {
-    --nav-background: #C4DAD2;
-    --nav-color: #16423C;
-    --body-background: #C4DAD2;
-    --text-color: #000000;
-    --text-outline: 1px 1px 0 rgba(0, 0, 0, 0.7);
+  --nav-background: #C4DAD2;
+  --nav-color: #16423C;
+  --body-background: #C4DAD2;
+  --text-color: #000000;
+  --text-outline: 1px 1px 0 rgba(0, 0, 0, 0.7);
+  --card-border: #16423C;
+  --link-color:#000000;
+  --skills-color:#000000;
+  --button-color:#16423C;
+  --footer-color:#16423C;
+  --footer-text:#ffff;
 }
 
 [data-theme='dark'] {
-    --nav-background: #16423C;
-    --nav-color: #E9EFEC;
-    --body-background: #16423C;
-    --text-color: #e0e0e0;
-    --text-outline: 1px 1px 0 rgba(255, 255, 255, 0.7);
+  --nav-background: #16423C;
+  --nav-color: #E9EFEC;
+  --body-background: #16423C; /* Dark background */
+  --text-color: #E9EFEC; /* Light text */
+  --text-outline: 1px 1px 0 rgba(255, 255, 255, 0.7);
+  --card-border: #FFFFFF; /* White borders for cards */
+  --link-color:##FFFFFF;
+  --skills-color:#FFFFFF;
+  --button-color:#6A9C89;
+  --footer-color:#062420;
+  --footer-text:#ffff;
 }
 
 .Nav {
-    background-color: var(--nav-background);
-    color: var(--nav-color);
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--nav-background);
+  color: var(--nav-color);
+  padding: 0.5rem 1rem;
+  position: fixed;  /* Fixed position to keep it at the top */
+  top: 0;           /* Aligns it to the top of the viewport */
+  left: 0;          /* Aligns it to the left */
+  width: 100%;      /* Ensures it spans the full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1000;    /* Ensures it stays above other content */
 }
 
 .logo {
-    font-family: 'Jost', sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--text-color);
-    text-shadow: var(--text-outline);
-    margin: 0;
+  font-family: 'Jost', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-shadow: var(--text-outline);
+  margin: 0;
 }
 
 .nav-controls {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.theme-toggle-btn, .menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 1rem;
+.theme-toggle-btn,
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-.theme-toggle-btn img, .menu-btn img {
-    width: 24px;
-    height: 24px;
-    transition: filter 0.3s ease;
+.theme-toggle-btn img,
+.menu-btn img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s ease;
 }
 
 [data-theme='dark'] .theme-toggle-btn img,
 [data-theme='dark'] .menu-btn img {
-    filter: invert(1) brightness(2);
+  filter: invert(1) brightness(2);
 }
 
 @media (max-width: 600px) {
-    .Nav {
-        align-items: flex-start;
-    }
+  .Nav {
+      align-items: flex-start;
+  }
 
-    .nav-controls {
-        margin-top: 1rem;
-    }
+  .nav-controls {
+      margin-top: 1rem;
+  }
 
-    .theme-toggle-btn {
-        margin-left: auto;
-    }
+  .theme-toggle-btn {
+      margin-left: auto;
+  }
+}
+
+@media (min-width: 1920px) {
+  .logo {
+    font-family: 'Jost', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-shadow: var(--text-outline);
+    margin: 0;
+  }
+  
+  .theme-toggle-btn, .menu-btn {
+    margin-left: 1rem;
+    margin-right: 1.8rem;
+  }
+  
+  .theme-toggle-btn img,
+  .menu-btn img {
+    scale: 1.7;
+    transition: filter 0.3s ease;
+  }
 }
 
 .cursor {
@@ -101,6 +142,7 @@ body {
 
 /*Header*/
 .Header {
+  margin-top: 70px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -334,11 +376,53 @@ body {
 }
 
 
+/* Extra Large Screen Styles */
+@media (min-width: 1920px) {
+  .Header{
+    margin-top: 100px;
+  }
+  .Heading, .Heading-2{
+    margin-left: 3px;
+    font-size: 32px;
+  }
+  .Heading-name, .Heading-name-2 {
+      font-size: 120px; /* Ensure large font for headings */
+  }
+
+  .subtitle {
+      font-size: 44px; /* Ensure subtitle size */
+  }
+
+  .social-links{
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+    scale: 1.9;
+  }
+
+  .additional-info {
+    scale: 1.5;
+    margin-left: 150px;
+    }
+
+  .img-container {
+      width: 1000px; /* Ensure container size */
+      height: 1000px; /* Ensure container size */
+  }
+  
+.button {
+  margin-top: 20px;
+  margin-left: 50px;
+scale: 1.5;
+}
+}
+
 .Service-Heading{
     font-size: 40px;
 }
 
 .service-heading{
+  margin-top: 100px;
     font-family: 'Jost', sans-serif;
     font-weight: bold;
     text-align: center;
@@ -357,7 +441,9 @@ body {
   
   .card {
     padding: 20px;
-    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid ;
+    border-color: var(--card-border);
     border-radius: 5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
@@ -385,7 +471,7 @@ body {
   
   .card-text {
     font-size: 1em;
-    color: #333;
+    color: var(--text-color);
   }
 
   .service-heading,
@@ -404,6 +490,46 @@ body {
     font-size: 25px;
   }
 }
+/* Extra Large Screen Styles */
+@media (min-width: 1920px) {
+  .Header{
+    margin-top: 100px;
+  }
+  .Heading, .Heading-2{
+    margin-left: 3px;
+    font-size: 32px;
+  }
+  .Heading-name, .Heading-name-2 {
+      font-size: 120px; /* Ensure large font for headings */
+  }
+
+  .subtitle {
+      font-size: 44px; /* Ensure subtitle size */
+  }
+
+  .social-links{
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+    scale: 1.9;
+  }
+
+  .additional-info {
+    scale: 1.5;
+    margin-left: 150px;
+    }
+
+  .img-container {
+      width: 1000px; /* Ensure container size */
+      height: 1000px; /* Ensure container size */
+  }
+  
+.button {
+  margin-top: 20px;
+  margin-left: 50px;
+scale: 1.5;
+}
+}
 
 .service-heading.fade-in,
 .service-subheading.fade-in {
@@ -412,11 +538,12 @@ body {
 }
 .no-border-button {
     padding-top: 70px;
+    font-weight: bold;
     border: none;
     background: none;
     cursor: pointer;
     font-size: inherit;
-    color: #007bff;
+    color: var(--link-color);
 }
 
 .no-border-button:hover {
@@ -431,7 +558,7 @@ body {
 }
 
 .skills-container {
-  margin-top: 200px;   
+  margin-top: 100px;   
 }
 
 .skills-heading {
@@ -529,7 +656,7 @@ body {
 .skill-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #000;
+  color: var(--skills-color);
 }
 
 .skill-percentage {
@@ -540,7 +667,7 @@ body {
 
 .skill-description {
   margin: 10px 0;
-  color: #777;
+  color: var(--skills-color);
   font-size: 1rem;
   flex-grow: 1;
 }
@@ -629,8 +756,9 @@ body {
 }
 
 .portfolio-card {
-  background: rgba(255, 255, 255, 0.9); /* Lighter background */
-  border: 2px solid #16423C; /* Dark outline */
+  background: rgba(255, 255, 255, 0.2); /* Lighter background */
+  border: 2px solid;
+  border-color: var(--card-border);
   border-radius: 10px; /* Adjusted border radius */
   padding: 20px;
   width: 80%; /* Default for three cards in a row */
@@ -680,7 +808,7 @@ body {
   margin: 20px auto; /* Centered margin */
   padding: 10px 20px;
   font-size: 16px; /* Adjusted font size */
-  background-color: #16423C; /* Dark background */
+  background-color: var(--button-color); /* Dark background */
   color: white;
   border: none; /* Removed border */
   border-radius: 5px;
@@ -701,6 +829,7 @@ body {
 
 /* Resume Headings */
 .resume-heading {
+  margin-top: 100px;
   font-family: 'Jost', sans-serif;
   font-weight: bold;
   text-align: center;
@@ -813,8 +942,9 @@ body {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 2px solid #000000; /* Circle border around button */
-  color: #000000;
+  border: 2px solid ;
+  border-color:var(--card-border); 
+  color: var(--card-border);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -828,7 +958,7 @@ body {
 .experience-details {
   margin-top: 10px;
   font-style: italic;
-  color: #555;
+  color: var(--card-border);
   transition: opacity 0.3s ease;
   opacity: 0;
   max-height: 0;
@@ -859,6 +989,11 @@ body {
 }
 
 /* Pricing Heading */
+
+.pricing-container{
+  margin-top: 100px;
+}
+
 .pricing-heading {
   font-family: 'Jost', sans-serif;
   font-weight: bold;
@@ -898,8 +1033,9 @@ body {
 
 /* Pricing Cards */
 .pricing-card {
-  background: rgba(255, 255, 255, 0.9); /* Lighter background */
-  border: 2px solid #16423C; /* Dark outline */
+  background: rgba(255, 255, 255, 0.2); /* Lighter background */
+  border: 2px solid ;
+  border-color: var(--card-border); /* Dark outline */
   border-radius: 10px;
   padding: 20px;
   width: 30%; /* Default for three cards in a row */
@@ -925,6 +1061,7 @@ body {
 
 /* Card Price */
 .card-price {
+  color:var(--card-border);
   font-size: 20px;
   text-align: left;
   margin: 10px 0;
@@ -947,7 +1084,7 @@ body {
   margin: 20px auto;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #16423C;
+  background-color: var(--button-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -995,6 +1132,10 @@ body {
 }
 
 /* Achievements Heading */
+.achievements-container{
+  margin-top: 100px;
+}
+
 .achievements-heading {
   font-family: 'Jost', sans-serif;
   font-weight: bold;
@@ -1041,8 +1182,9 @@ body {
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center align items horizontally */
   justify-content: center; /* Center align items vertically */
-  background: rgba(255, 255, 255, 0.9); /* Lighter background */
-  border: 2px solid #16423C; /* Dark outline */
+  background: rgba(255, 255, 255, 0.2); /* Lighter background */
+  border: 2px solid;
+  border-color: var(--card-border); /* Dark outline */
   border-radius: 10px;
   padding: 20px;
   width: 30%; /* Default for three cards in a row */
@@ -1068,6 +1210,7 @@ body {
 
 /* Card Description */
 .card-description {
+  color: var(--card-border);
   font-size: 16px;
   text-align: center; /* Center align description text */
   margin: 10px 0;
@@ -1106,7 +1249,8 @@ body {
 }
 /* General Contact Styling */
 .contact-container {
-  padding: 50px;
+  margin-top: 100px;
+  padding: 0px 50px 50px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1179,7 +1323,7 @@ h3 {
 
 p {
   margin: 0;
-  color: #666;
+  color: var(--card-border);
 }
 
 /* Form Styling */
@@ -1243,7 +1387,7 @@ input:focus, textarea:focus {
 
 .submit-button {
   padding: 12px 30px;
-  background-color: #16423C;
+  background-color: var(--button-color);
   color: white;
   border: none;
   border-radius: 25px;
@@ -1272,9 +1416,12 @@ input:focus, textarea:focus {
   }
 }
 .footer {
-  background-color: #16423C; 
-  color: white; 
+  background-color: var(--footer-color); 
   padding: 30px 20px; 
+}
+
+.text-footer{
+  color: var(--footer-text);
 }
 
 .footer-content {
