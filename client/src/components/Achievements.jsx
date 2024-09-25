@@ -32,7 +32,7 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="achievements-container">
+    <div id='achievements' className="achievements-container">
       <div className={`achievements-heading ${headingVisible ? 'fade-in' : ''}`}>Achievements</div>
       <div className={`achievements-subheading ${subheadingVisible ? 'fade-in' : ''}`}>My Services</div>
       <div className={`achievements-cards ${cardsVisible ? 'fade-in' : ''}`}>

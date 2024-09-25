@@ -15,37 +15,31 @@ const Portfolio = () => {
   const portfolioData = [
     { 
       title: 'Orbiqe Technologies', 
-      description: 'A leading company specializing in electrification solutions for sustainable energy, focusing on innovative technologies to power the future.', 
+      description: 'Innovative electrification solutions for a sustainable energy future.', 
       link: 'https://linktoyourproject1.com',
       image: orbiqe
     },
     { 
-      title: 'HUD Electronet', 
-      description: 'A groundbreaking project that provides smart electrification solutions for urban transportation, enhancing efficiency and sustainability.', 
-      link: 'https://linktoyourproject2.com',
-      image: 'https://linktoimage2.com/image.jpg'
-    },
-    { 
       title: 'RIZZQ - Job Portal', 
-      description: 'A revolutionary platform connecting job seekers with employers, designed to streamline the hiring process with advanced matching algorithms.', 
+      description: 'A platform connecting job seekers and employers with advanced matching algorithms.', 
       link: 'https://linktoyourproject6.com',
       image: Rizzq
     },
     { 
-      title: 'Google Keeps Clone', 
-      description: 'An innovative solution for organizing notes and tasks, inspired by Google Keep, featuring a user-friendly interface and enhanced functionality.', 
+      title: 'Google Keep Clone', 
+      description: 'A user-friendly note and task organizer inspired by Google Keep.', 
       link: 'https://linktoyourproject3.com',
       image: Keeper
     },
     { 
       title: 'FiveWorks Dispatching Services', 
-      description: 'An exciting project that optimizes dispatching operations for logistics companies, enhancing efficiency and reducing operational costs.', 
+      description: 'Optimizing logistics operations to enhance efficiency and reduce costs.', 
       link: 'https://linktoyourproject5.com',
       image: FiveWorks
     },
     { 
-      title: 'ToDo List', 
-      description: 'A captivating project that helps users manage their tasks effectively with features like deadlines, reminders, and priority settings.', 
+      title: 'ToDo List App', 
+      description: 'Manage tasks effectively with features like deadlines and priority settings.', 
       link: 'https://linktoyourproject4.com',
       image: Todo
     },
@@ -80,7 +74,7 @@ const Portfolio = () => {
 
   return (
     <div>
-      <div style={{marginTop:"100px"}} className={`portfolio-heading ${headingVisible ? 'fade-in' : ''}`}>My Portfolio</div>
+      <div id='portfolio' style={{marginTop:"100px"}} className={`portfolio-heading ${headingVisible ? 'fade-in' : ''}`}>My Portfolio</div>
       <div className={`portfolio-subheading ${subheadingVisible ? 'fade-in' : ''}`}>Recent Work</div>
 
       <div className="portfolio-grid">

@@ -4,6 +4,7 @@ body {
     background-color: var(--body-background);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
 }
 
 :root {
@@ -18,6 +19,8 @@ body {
   --button-color:#16423C;
   --footer-color:#16423C;
   --footer-text:#ffff;
+  --Sidebar-color:#16423C;
+  --Sidebar-text:#ffff;
 }
 
 [data-theme='dark'] {
@@ -32,21 +35,23 @@ body {
   --button-color:#6A9C89;
   --footer-color:#062420;
   --footer-text:#ffff;
+  --Sidebar-color:#6A9C89;
+  --Sidebar-text:#000000;
 }
 
 .Nav {
   background-color: var(--nav-background);
   color: var(--nav-color);
   padding: 0.5rem 1rem;
-  position: fixed;  /* Fixed position to keep it at the top */
-  top: 0;           /* Aligns it to the top of the viewport */
-  left: 0;          /* Aligns it to the left */
-  width: 100%;      /* Ensures it spans the full width */
+  position: fixed;  
+  top: 0;           
+  left: 0;          
+  width: 100%;     
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease, color 0.3s ease;
-  z-index: 1000;    /* Ensures it stays above other content */
+  z-index: 1000;    
 }
 
 .logo {
@@ -68,8 +73,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-right: 18px;
 }
 
 .theme-toggle-btn img,
@@ -98,6 +102,12 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .menu-btn{
+    display: none;
+  }
+}
+
 @media (min-width: 1920px) {
   .logo {
     font-family: 'Jost', sans-serif;
@@ -109,6 +119,7 @@ body {
   }
   
   .theme-toggle-btn, .menu-btn {
+    height: 120px;
     margin-left: 1rem;
     margin-right: 1.8rem;
   }
@@ -265,6 +276,10 @@ body {
     transition: filter 0.3s ease;
 }
 
+[data-theme='dark'] .social-link img {
+  filter: invert(1); /* Invert colors for dark mode */
+}
+
 .social-link img:hover {
     filter: brightness(0.8);
 }
@@ -326,9 +341,17 @@ body {
 }
 
 /* Responsive Header */
-@media (max-width: 600px) {
+/* Responsive Header */
+@media (max-width: 768px) {
   .intro {
       width: auto;
+      justify-content: center; /* Center content */
+      text-align: center; /* Center text */
+  }
+
+  .name {
+      align-items: center; /* Center items vertically */
+      text-align: center; /* Center text */
   }
 
   .heading {
@@ -338,16 +361,19 @@ body {
   .Heading-name, .Heading-name-2 {
     font-size: 2.5rem; /* Smaller font size */
   }
-  .subtitle{
+
+  .subtitle {
     font-size: 1.3rem;
   }
-  .additional-info{
-    text-align: justify;
+
+  .additional-info {
+    text-align: justify; /* Justify text */
     font-size: 1rem;
   }
 
   .img-container {
     display: flex;
+    justify-content: center; /* Center the image container */
     align-items: center;
     width: 300px; /* Reduced width */
     height: 300px; /* Reduced height */
@@ -370,18 +396,18 @@ body {
     width: 130%; /* Reduced image size */
     height: auto;
   }
-  .button-container{
-    flex-direction: column;
+
+  .button-container {
+    flex-direction: column; /* Stack buttons */
+    align-items: center; /* Center buttons */
   }
 }
 
 
 /* Extra Large Screen Styles */
 @media (min-width: 1920px) {
-  .Header{
-    margin-top: 100px;
-  }
   .Heading, .Heading-2{
+    margin-top: 30px;
     margin-left: 3px;
     font-size: 32px;
   }
@@ -390,6 +416,7 @@ body {
   }
 
   .subtitle {
+    margin-left: 3px;
       font-size: 44px; /* Ensure subtitle size */
   }
 
@@ -402,18 +429,19 @@ body {
 
   .additional-info {
     scale: 1.5;
-    margin-left: 150px;
+    margin-left: 200px;
     }
 
   .img-container {
+    margin-top: 20px;
       width: 1000px; /* Ensure container size */
       height: 1000px; /* Ensure container size */
   }
   
-.button {
-  margin-top: 20px;
-  margin-left: 50px;
-scale: 1.5;
+    .button-container {
+      margin-top: 20px;
+      margin-left: 20px;
+    scale: 1.2;
 }
 }
 
@@ -619,7 +647,7 @@ scale: 1.5;
     font-size: 40px;
   }
   .skill-container {
-    flex: 0 1 calc(50% - 20px); /* Two skills on tablet */
+    flex: 0 1 calc(40% - 20px); /* Two skills on tablet */
     margin: 10px;
   }
 }
@@ -630,6 +658,26 @@ scale: 1.5;
   .skill-container {
     flex: 0 1 calc(30% - 20px); /* Three skills on desktop */
     margin: 10px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .service-heading,.skills-heading{
+    font-size: 90px;
+  }
+  .service-subheading,.skills-subheading{
+    font-size: 50px;
+  }
+  .card-heading,.card-text,.card-subheading,.no-border-button{
+    font-size: 28px;
+  }
+  .card-img{
+    scale: 1.5;
+    margin: 50px;
+  }
+  .skill-container {
+    scale: 1.6;
+    margin: 30px;
   }
 }
 
@@ -672,6 +720,7 @@ scale: 1.5;
   flex-grow: 1;
 }
 
+
 .progress-bar-container {
   position: relative;
   height: 4px;
@@ -709,7 +758,6 @@ scale: 1.5;
   color: #555;
   margin-top: 2px;
 }
-
 .portfolio-heading {
   font-family: 'Jost', sans-serif;
   font-weight: bold;
@@ -755,13 +803,20 @@ scale: 1.5;
   }
 }
 
+@media (min-width: 769px) {
+  .portfolio-grid > .portfolio-card:nth-child(4),
+  .portfolio-grid > .portfolio-card:nth-child(5) {
+    margin-left: 210px; /* Apply left margin only on larger screens */
+  }
+}
+
 .portfolio-card {
-  background: rgba(255, 255, 255, 0.2); /* Lighter background */
+  background: rgba(255, 255, 255, 0.2);
   border: 2px solid;
   border-color: var(--card-border);
-  border-radius: 10px; /* Adjusted border radius */
+  border-radius: 10px;
   padding: 20px;
-  width: 80%; /* Default for three cards in a row */
+  width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
   display: flex;
@@ -770,13 +825,12 @@ scale: 1.5;
   justify-content: center;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s; /* Added box-shadow transition */
+  transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s;
 }
 
 .portfolio-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .fade-in {
   opacity: 1;
@@ -804,27 +858,38 @@ scale: 1.5;
 }
 
 .portfolio-card-link {
-  display: block; /* Changed to block for centering */
-  margin: 20px auto; /* Centered margin */
+  display: block;
+  margin: 20px auto;
   padding: 10px 20px;
-  font-size: 16px; /* Adjusted font size */
-  background-color: var(--button-color); /* Dark background */
+  font-size: 16px;
+  background-color: var(--button-color);
   color: white;
-  border: none; /* Removed border */
+  border: none;
   border-radius: 5px;
-  cursor: pointer; /* Added cursor pointer */
-  text-decoration: none; /* Ensured no underline */
+  cursor: pointer;
+  text-decoration: none;
   text-align: center;
   transition: background-color 0.3s ease;
 }
 
 .portfolio-card-link:hover {
-  background-color: #0f2b26; /* Darker background on hover */
+  background-color: #0f2b26;
 }
-
 
 .portfolio-card:hover {
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 1920px) {
+  .portfolio-grid > .portfolio-card:nth-child(4),
+  .portfolio-grid > .portfolio-card:nth-child(5) {
+    margin-left: 340px; /* Apply left margin only on larger screens */
+  } 
+  .portfolio-card-title,.portfolio-card-description{
+    font-size: 30px;
+  }
+  .portfolio-card-link{
+    font-size: 25px;
+  }
 }
 
 /* Resume Headings */
@@ -1407,6 +1472,7 @@ input:focus, textarea:focus {
   }
 
   .contact-details, .contact-form {
+    margin: 10px;
     flex-basis: 100%; /* Allow full width */
   }
 
@@ -1415,12 +1481,13 @@ input:focus, textarea:focus {
     gap: 10px; /* Adjust gap for stacked layout */
   }
 }
+
 .footer {
   background-color: var(--footer-color); 
   padding: 30px 20px; 
 }
 
-.text-footer{
+.text-footer {
   color: var(--footer-text);
 }
 
@@ -1441,11 +1508,21 @@ input:focus, textarea:focus {
 .social-links img {
   width: 30px;
   height: 30px;
+  transition: filter 0.3s ease; /* Smooth transition */
 }
 
 .social-links a {
   display: flex;
   align-items: center; 
+}
+
+/* Invert color for dark mode */
+[data-theme='dark'] .social-links img {
+  filter: invert(1); /* Invert colors for dark mode */
+}
+
+.social-links img:hover {
+  filter: brightness(0.8); /* Hover effect */
 }
 
 .developer-info {
@@ -1456,7 +1533,7 @@ input:focus, textarea:focus {
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Align items to the start */
+    align-items: center; /* Align items to the center */
   }
 
   .social-links {
@@ -1465,7 +1542,7 @@ input:focus, textarea:focus {
 
   .developer-info {
     margin-top: 20px;
-    text-align: center; /* Align developer info to the left */
+    text-align: center; /* Align developer info to the center */
   }
 }
 
@@ -1478,4 +1555,172 @@ input:focus, textarea:focus {
   width: 20px; /* Adjust size as needed */
   height: 20px; /* Adjust size as needed */
   margin-right: 10px; /* Space between the tick and the text */
+}
+
+@media (min-width: 1920px) {
+  h3,p,.form-group,input,.terms-label,textarea,.submit-button{
+    font-size: 30px;
+  }
+  .achievements-heading,.resume-heading,.pricing-heading,.portfolio-heading{
+    font-size: 90px;
+  }
+  .achievements-subheading,.resume-subheading,.pricing-subheading,.portfolio-subheading{
+    font-size: 50px;
+  }
+  .card-title,.card-features,.card-price{
+    font-size: 35px;
+  }
+  .buy-button{
+    font-size: 28px;
+  }
+  .img-achievements{
+    scale: 1.2;
+  }
+  .card-title,.card-description{
+    font-size: 30px;
+  }
+  .education-heading,.experience-heading{
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .education-details,.experience-details{
+    font-size: 25px;
+  }
+  .education-name,.experience-name{
+    font-size: 30px;
+  }
+  .experience-item,.education-item{
+    width: 700px;
+  }
+  .container{
+    scale: 1.1;
+    margin-left: 120px;
+    margin-right: 200px;
+  }
+  .text-footer {
+    font-size: 1.8em; /* Increase font size for better readability */
+  }
+
+  .footer-content {
+    max-width: 1600px; /* Optionally increase the max-width */
+  }
+
+  .social-links img {
+    width: 30px; /* Increase icon size */
+    height: 30px; /* Maintain aspect ratio */
+  }
+
+ }
+
+/*Sidebar*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px; /* Increased width */
+  height: 100%;
+  background: var(--Sidebar-color); /* Adjust based on your theme */
+  color: var(--Sidebar-text);
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--Sidebar-text);
+  cursor: pointer;
+  font-size: 24px; /* Adjust size as needed */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0; /* Remove padding for full centering */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: calc(100% - 80px); /* Adjust for close button height */
+  margin: 40px 0; /* Margin for top and bottom */
+}
+
+nav ul li {
+  margin: 10px 0;
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 20px; /* Increase font size */
+  text-align: center; /* Center text within the list item */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li:hover {
+  color: #007BFF; /* Change color on hover */
+}
+
+.social-links-sidebar {
+  padding: 20px;
+  text-align: center;
+}
+
+.social-links-sidebar a {
+  display: inline-block; /* Each link on the same line */
+  margin: 10px; /* Space around each icon */
+}
+
+.social-icon {
+  width: 30px; /* Adjust the size of the icons */
+  height: 30px; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+/* Invert colors for dark mode */
+[data-theme='light'] .social-icon {
+  filter: invert(1); /* Invert colors for dark mode */
+}
+
+.social-links-sidebar a:hover .social-icon {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+@media (min-width: 1920px) {
+  .sidebar {
+    width: 350px; /* Increase width for larger screens */
+    padding: 40px; /* Add padding for spacing */
+  }
+
+  .close-btn {
+    font-size: 28px; /* Larger close button */
+    top: 30px; /* Adjust positioning */
+    right: 30px; /* Adjust positioning */
+  }
+
+  nav ul {
+    margin: 60px 0; /* Adjust margin for top and bottom */
+  }
+
+  nav ul li {
+    font-size: 34px; /* Increase font size for better readability */
+    margin: 15px 0; /* Increase margin between items */
+  }
+
+  .social-links-sidebar {
+    padding: 30px; /* Add more padding for larger screens */
+  }
+
+  .social-icon {
+    width: 40px; /* Increase icon size */
+    height: 40px; /* Maintain aspect ratio */
+  }
+
+  .social-links-sidebar a {
+    margin: 15px; /* Increase spacing around icons */
+  }
 }

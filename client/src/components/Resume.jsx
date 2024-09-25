@@ -79,7 +79,7 @@ const Resume = () => {
 
   return (
     <div>
-      <div className={`resume-heading ${headingVisible ? 'fade-in' : ''}`}>My Resume</div>
+      <div id='resume' className={`resume-heading ${headingVisible ? 'fade-in' : ''}`}>My Resume</div>
       <div className={`resume-subheading ${subheadingVisible ? 'fade-in' : ''}`}>My Story</div>
       <div className="container">
         <div className={`education-container ${educationVisible ? 'fade-in' : ''}`}>

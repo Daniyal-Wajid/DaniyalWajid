@@ -23,7 +23,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="contact-container">
+    <div id='contact' className="contact-container">
       <div className={`achievements-heading ${headingVisible ? 'fade-in' : ''}`}>Contact Me</div>
       <div className={`achievements-subheading ${headingVisible ? 'fade-in' : ''}`}>Let's Talk About Ideas</div>
       <div className="contact-content">

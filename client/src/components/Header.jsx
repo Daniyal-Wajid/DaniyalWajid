@@ -20,7 +20,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="Header">
+    <div id='home' className="Header">
       <div className='name'>
         <div className="intro">
           <span className="Heading">HELLO,</span>
@@ -42,18 +42,18 @@ const Header = () => {
           From Lahore, Pakistan: MERN Stack Developer with Rich Web Design Experience Ready to Collaborate on Unique Projects!
         </div>
         <div className='social-links'>
-          <a href="https://www.linkedin.com/in/yourprofile" className='social-link' target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/daniyal-wajid" className='social-link' target="_blank" rel="noopener noreferrer">
             <img src={LinkedInIcon} alt="LinkedIn" />
           </a>
-          <a href="https://github.com/yourprofile" className='social-link' target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Daniyal-Wajid" className='social-link' target="_blank" rel="noopener noreferrer">
             <img src={GitHubIcon} alt="GitHub" />
           </a>
-          <a href="https://instagram.com/yourprofile" className='social-link' target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/dani.94_?igsh=YnR1aHg2dG44bGtw" className='social-link' target="_blank" rel="noopener noreferrer">
             <img src={InstagramIcon} alt="Instagram" />
           </a>
         </div>
         <div className='button-container'>
-          <a href="/path-to-cv" className='button download-cv' download>Download CV</a>
+          <a href="/Daniyal Wajid.pdf" className='button download-cv' download>Download CV</a>
           <button className='button my-skills'
             onClick={() => {
               const skillsSection = document.getElementById('skills');
