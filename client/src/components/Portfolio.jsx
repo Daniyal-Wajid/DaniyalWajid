@@ -22,13 +22,13 @@ const Portfolio = () => {
     { 
       title: 'RIZZQ - Job Portal', 
       description: 'A platform connecting job seekers and employers with advanced matching algorithms.', 
-      link: 'https://linktoyourproject6.com',
+      link: 'https://github.com/Daniyal-Wajid/Rizzq',
       image: Rizzq
     },
     { 
       title: 'Google Keep Clone', 
       description: 'A user-friendly note and task organizer inspired by Google Keep.', 
-      link: 'https://linktoyourproject3.com',
+      link: 'https://github.com/Daniyal-Wajid/Keeper-App',
       image: Keeper
     },
     { 
@@ -40,7 +40,7 @@ const Portfolio = () => {
     { 
       title: 'ToDo List App', 
       description: 'Manage tasks effectively with features like deadlines and priority settings.', 
-      link: 'https://linktoyourproject4.com',
+      link: 'https://github.com/Daniyal-Wajid/Todo-List',
       image: Todo
     },
   ];

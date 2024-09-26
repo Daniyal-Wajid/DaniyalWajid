@@ -6,7 +6,15 @@ const PortfolioCard = ({ className, title, description, link, image }) => {
       {image && <img src={image} alt={title} className="portfolio-card-image" />}
       <div className="portfolio-card-title">{title}</div>
       <div className="portfolio-card-description">{description}</div>
-      <a href={link} className="portfolio-card-link" aria-label={`View project for ${title}`}>View Project</a>
+      <a 
+        href={link} 
+        className="portfolio-card-link" 
+        aria-label={`View project for ${title}`}
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        View Project
+      </a>
     </div>
   );
 };
