@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+
 const Daniyal = '/assets/Daniyal.png';
 const LinkedInIcon = '/assets/linkedin.png';
 const GitHubIcon = '/assets/github.png';

@@ -4,6 +4,9 @@ const nextConfig = {
 
   output: "export",
 
+  basePath: "/DaniyalWajid",
+  assetPrefix: "/DaniyalWajid/",
+
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -15,9 +18,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-
-  basePath: "/DaniyalWajid",
-  assetPrefix: "/DaniyalWajid/",
 };
 
 module.exports = nextConfig;

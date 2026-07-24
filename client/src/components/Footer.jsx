@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 const LinkedInIcon = '/assets/linkedin.png';
 const GitHubIcon = '/assets/github.png';
 const InstagramIcon = '/assets/instagram.png';
