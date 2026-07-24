@@ -3,10 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import ServiceCard from './ServiceCard';
-const front = '/assets/services/frontend.png';
-const back = '/assets/services/backend.png';
-const full = '/assets/services/fullstack.png';
-const ux = '/assets/services/ux.png';
+import { withBasePath } from '../utils/basePath';
+
+const front = withBasePath('/assets/services/frontend.png');
+const back = withBasePath('/assets/services/backend.png');
+const full = withBasePath('/assets/services/fullstack.png');
+const ux = withBasePath('/assets/services/ux.png');
 
 const Services = () => {
   const [headingVisible, setHeadingVisible] = useState(false);

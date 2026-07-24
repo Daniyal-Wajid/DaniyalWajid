@@ -2,9 +2,10 @@
 
 // Nav.js
 import React, { useState } from 'react';
-const sunIcon = '/assets/nav/sun.png';
-const moonIcon = '/assets/nav/moon.png';
-const menuIcon = '/assets/nav/menu.png';
+import { withBasePath } from '../utils/basePath';
+const sunIcon = withBasePath('/assets/nav/sun.png');
+const moonIcon = withBasePath('/assets/nav/moon.png');
+const menuIcon = withBasePath('/assets/nav/menu.png');
 import Sidebar from './Sidebar'; // Import the Sidebar component
 
 const Nav = ({ isDarkMode, toggleTheme }) => {

@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
+import { withBasePath } from '../utils/basePath';
 
-const LinkedInIcon = '/assets/linkedin.png';
-const GitHubIcon = '/assets/github.png';
-const InstagramIcon = '/assets/instagram.png';
+const LinkedInIcon = withBasePath('/assets/linkedin.png');
+const GitHubIcon = withBasePath('/assets/github.png');
+const InstagramIcon = withBasePath('/assets/instagram.png');
 
 const Footer = () => {
   return (

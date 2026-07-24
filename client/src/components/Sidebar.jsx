@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useRef, useEffect, useCallback } from 'react';
-const LinkedInIcon = '/assets/linkedin.png';
-const GitHubIcon = '/assets/github.png';
-const InstagramIcon = '/assets/instagram.png';
+import { withBasePath } from '../utils/basePath';
+
+const LinkedInIcon = withBasePath('/assets/linkedin.png');
+const GitHubIcon = withBasePath('/assets/github.png');
+const InstagramIcon = withBasePath('/assets/instagram.png');
 
 const Sidebar = ({ isOpen, onClose }) => {
   const sidebarRef = useRef(null);

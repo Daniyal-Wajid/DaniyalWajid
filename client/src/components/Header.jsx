@@ -1,11 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { withBasePath } from '../utils/basePath';
 
-const Daniyal = '/assets/Daniyal.png';
-const LinkedInIcon = '/assets/linkedin.png';
-const GitHubIcon = '/assets/github.png';
-const InstagramIcon = '/assets/instagram.png';
+const Daniyal = withBasePath('/assets/Daniyal.png');
+const LinkedInIcon = withBasePath('/assets/linkedin.png');
+const GitHubIcon = withBasePath('/assets/github.png');
+const InstagramIcon = withBasePath('/assets/instagram.png');
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);

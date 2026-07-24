@@ -2,11 +2,13 @@
 
 import React, { useEffect, useState } from 'react';
 import PortfolioCard from './PortfolioCard';
-const orbiqe = '/assets/portfolio/logo.png';
-const Rizzq = '/assets/portfolio/rizzq.png';
-const Keeper = '/assets/portfolio/Keeper.png';
-const FiveWorks = '/assets/portfolio/fiveworks.png';
-const Todo = '/assets/portfolio/todo.png';
+import { withBasePath } from '../utils/basePath';
+
+const orbiqe = withBasePath('/assets/portfolio/logo.png');
+const Rizzq = withBasePath('/assets/portfolio/rizzq.png');
+const Keeper = withBasePath('/assets/portfolio/Keeper.png');
+const FiveWorks = withBasePath('/assets/portfolio/fiveworks.png');
+const Todo = withBasePath('/assets/portfolio/todo.png');
 
 const Portfolio = () => {
   const [headingVisible, setHeadingVisible] = useState(false);

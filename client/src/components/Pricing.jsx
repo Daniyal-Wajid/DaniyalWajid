@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-const tickImage = '/assets/check.png';
-const crossImage = '/assets/cross.png';
+import { withBasePath } from '../utils/basePath';
+
+const tickImage = withBasePath('/assets/check.png');
+const crossImage = withBasePath('/assets/cross.png');
 
 
 const Pricing = () => {

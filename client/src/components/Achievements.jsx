@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-const grades = "/assets/achievements/grades.png";
-const first = "/assets/achievements/first-position.png";
-const certificates = "/assets/achievements/certificate.png";
+import { withBasePath } from '../utils/basePath';
+
+const grades = withBasePath('/assets/achievements/grades.png');
+const first = withBasePath('/assets/achievements/first-position.png');
+const certificates = withBasePath('/assets/achievements/certificate.png');
 
 const Achievements = () => {
   const [headingVisible, setHeadingVisible] = useState(false);
