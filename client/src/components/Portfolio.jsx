@@ -1,0 +1,97 @@
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import PortfolioCard from './PortfolioCard'; 
+const orbiqe = "/assets/portfolio/logo.png"
+const Rizzq = "/assets/portfolio/rizzq.png"
+const Keeper = "/assets/portfolio/Keeper.png"
+const FiveWorks = "/assets/portfolio/fiveworks.png"
+const Todo = "/assets/portfolio/todo.png"
+
+const Portfolio = () => {
+  const [headingVisible, setHeadingVisible] = useState(false);
+  const [subheadingVisible, setSubheadingVisible] = useState(false);
+  const [cardsVisible, setCardsVisible] = useState(Array(6).fill(false));
+
+  const portfolioData = [
+    { 
+      title: 'Orbiqe Technologies', 
+      description: 'Innovative electrification solutions for a sustainable energy future.', 
+      link: 'https://linktoyourproject1.com',
+      image: orbiqe
+    },
+    { 
+      title: 'RIZZQ - Job Portal', 
+      description: 'A platform connecting job seekers and employers with advanced matching algorithms.', 
+      link: 'https://github.com/Daniyal-Wajid/Rizzq',
+      image: Rizzq
+    },
+    { 
+      title: 'Google Keep Clone', 
+      description: 'A user-friendly note and task organizer inspired by Google Keep.', 
+      link: 'https://github.com/Daniyal-Wajid/Keeper-App',
+      image: Keeper
+    },
+    { 
+      title: 'FiveWorks Dispatching Services', 
+      description: 'Optimizing logistics operations to enhance efficiency and reduce costs.', 
+      link: 'https://linktoyourproject5.com',
+      image: FiveWorks
+    },
+    { 
+      title: 'ToDo List App', 
+      description: 'Manage tasks effectively with features like deadlines and priority settings.', 
+      link: 'https://github.com/Daniyal-Wajid/Todo-List',
+      image: Todo
+    },
+  ];
+  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+
+      const headingPosition = document.querySelector('.portfolio-heading').getBoundingClientRect().top;
+      setHeadingVisible(headingPosition < windowHeight);
+
+      const subheadingPosition = document.querySelector('.portfolio-subheading').getBoundingClientRect().top;
+      setSubheadingVisible(subheadingPosition < windowHeight);
+
+      portfolioData.forEach((_, index) => {
+        const cardPosition = document.querySelector(`.portfolio-card-${index}`).getBoundingClientRect().top;
+        if (cardPosition < windowHeight) {
+          setCardsVisible((prev) => {
+            const newCardsVisible = [...prev];
+            newCardsVisible[index] = true;
+            return newCardsVisible;
+          });
+        }
+      });
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
+    <div>
+      <div id='portfolio' style={{marginTop:"100px"}} className={`portfolio-heading ${headingVisible ? 'fade-in' : ''}`}>My Portfolio</div>
+      <div className={`portfolio-subheading ${subheadingVisible ? 'fade-in' : ''}`}>Recent Work</div>
+
+      <div className="portfolio-grid">
+        {portfolioData.map((item, index) => (
+          <PortfolioCard
+          key={index}
+          className={`portfolio-card-${index} ${cardsVisible[index] ? 'fade-in' : ''}`}
+          title={item.title}
+          description={item.description}
+          link={item.link}
+          image={item.image} // Make sure this line is included
+        />        
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Portfolio;

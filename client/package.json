@@ -1,0 +1,53 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+
+  "homepage": "https://daniyal-wajid.github.io/DaniyalWajid/",
+
+  "dependencies": {
+    "next": "^14.2.15",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
+  },
+
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "gh-pages -d out"
+  },
+
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+
+  "devDependencies": {
+    "@types/node": "26.1.1",
+    "@types/react": "19.2.17",
+    "ajv": "^7.2.4",
+    "eslint": "^10.7.0",
+    "eslint-config-next": "^16.2.11",
+    "gh-pages": "^6.3.0",
+    "typescript": "7.0.2"
+  }
+}
