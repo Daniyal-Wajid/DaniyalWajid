@@ -1033,7 +1033,7 @@ scale: 1.5;
 
 .portfolio-card-badge {
   position: absolute;
-  top: -12px;
+  top: -8px;
   left: 20px;
   background-color: #6A9C89;
   color: #16423C;
@@ -1045,6 +1045,7 @@ scale: 1.5;
   border-radius: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   z-index: 1;
+  overflow: visible;
 }
 
 .portfolio-card-image-placeholder {
