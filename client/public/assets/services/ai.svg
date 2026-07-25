@@ -1,0 +1,24 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A9C89"/>
+      <stop offset="100%" stop-color="#16423C"/>
+    </linearGradient>
+  </defs>
+  <circle cx="300" cy="300" r="230" fill="url(#aiGrad)" opacity="0.12"/>
+  <rect x="190" y="190" width="220" height="220" rx="28" fill="none" stroke="#16423C" stroke-width="14"/>
+  <circle cx="300" cy="300" r="52" fill="none" stroke="#6A9C89" stroke-width="14"/>
+  <circle cx="300" cy="300" r="16" fill="#16423C"/>
+  <g stroke="#16423C" stroke-width="14" stroke-linecap="round">
+    <line x1="300" y1="130" x2="300" y2="190"/>
+    <line x1="300" y1="410" x2="300" y2="470"/>
+    <line x1="130" y1="300" x2="190" y2="300"/>
+    <line x1="410" y1="300" x2="470" y2="300"/>
+  </g>
+  <g fill="#6A9C89">
+    <circle cx="300" cy="130" r="18"/>
+    <circle cx="300" cy="470" r="18"/>
+    <circle cx="130" cy="300" r="18"/>
+    <circle cx="470" cy="300" r="18"/>
+  </g>
+</svg>

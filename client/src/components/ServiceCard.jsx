@@ -21,10 +21,10 @@ const ServiceCard = ({ heading, subheading, text, img }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handlePricingClick = () => {
-    const pricingSection = document.getElementById('pricing');
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' });
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -33,10 +33,10 @@ const ServiceCard = ({ heading, subheading, text, img }) => {
       <div className="card-heading">{heading}</div>
       <div className="card-subheading">{subheading}</div>
       <div className="card-text">{text}</div>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div className="card-footer">
         <div className='card-btn'>
-          <button className="no-border-button" onClick={handlePricingClick}>
-            See Pricing
+          <button className="no-border-button" onClick={handleContactClick}>
+            Get In Touch
           </button>
         </div>
         <div className='card-img'>

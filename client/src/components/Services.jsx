@@ -9,12 +9,19 @@ const front = withBasePath('/assets/services/frontend.png');
 const back = withBasePath('/assets/services/backend.png');
 const full = withBasePath('/assets/services/fullstack.png');
 const ux = withBasePath('/assets/services/ux.png');
+const ai = withBasePath('/assets/services/ai.svg');
 
 const Services = () => {
   const [headingVisible, setHeadingVisible] = useState(false);
   const [subheadingVisible, setSubheadingVisible] = useState(false);
 
   const cardData = [
+    {
+      heading: 'AI & Machine Learning',
+      subheading: 'Computer Vision Systems',
+      text: 'I design and train custom AI models for real-time object detection, face recognition, and video analysis using YOLOv8, OpenCV, PyTorch, and TensorFlow.',
+      img: ai
+    },
     {
       heading: 'Web Development',
       subheading: 'Beautiful Frontends',

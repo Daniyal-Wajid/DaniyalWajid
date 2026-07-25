@@ -8,13 +8,13 @@ import Services from "../src/components/Services";
 import Skills from "../src/components/Skills";
 import Portfolio from "../src/components/Portfolio";
 import Resume from "../src/components/Resume";
-import Pricing from "../src/components/Pricing";
 import Achievements from "../src/components/Achievements";
 import Contact from "../src/components/Contact";
 import Footer from "../src/components/Footer";
 
 export default function HomePage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     document.documentElement.setAttribute(
@@ -28,12 +28,25 @@ export default function HomePage() {
     return () => cleanupCursor();
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      setScrollProgress(progress);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
   return (
     <main>
+      <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
       <div className="cursor" id="cursor" />
       <Nav isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <Header />
@@ -41,7 +54,6 @@ export default function HomePage() {
       <Skills />
       <Portfolio />
       <Resume />
-      <Pricing />
       <Achievements />
       <Contact />
       <Footer />

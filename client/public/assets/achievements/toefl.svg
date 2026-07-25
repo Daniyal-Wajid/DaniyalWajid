@@ -1,0 +1,15 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="toeflGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A9C89"/>
+      <stop offset="100%" stop-color="#16423C"/>
+    </linearGradient>
+  </defs>
+  <circle cx="300" cy="300" r="230" fill="url(#toeflGrad)" opacity="0.10"/>
+  <circle cx="300" cy="300" r="150" fill="none" stroke="#16423C" stroke-width="14"/>
+  <ellipse cx="300" cy="300" rx="60" ry="150" fill="none" stroke="#6A9C89" stroke-width="10"/>
+  <line x1="150" y1="300" x2="450" y2="300" stroke="#6A9C89" stroke-width="10"/>
+  <line x1="172" y1="220" x2="428" y2="220" stroke="#6A9C89" stroke-width="8"/>
+  <line x1="172" y1="380" x2="428" y2="380" stroke="#6A9C89" stroke-width="8"/>
+  <text x="300" y="500" font-family="Arial, sans-serif" font-weight="800" font-size="70" fill="#16423C" text-anchor="middle">C1</text>
+</svg>

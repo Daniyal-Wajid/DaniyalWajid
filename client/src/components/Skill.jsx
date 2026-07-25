@@ -1,10 +1,12 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import { useTilt } from '../utils/useTilt';
 
 const Skill = ({ name, percentage, description }) => {
   const progressRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const tiltRef = useTilt(6, 4);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,12 +20,19 @@ const Skill = ({ name, percentage, description }) => {
       }
     };
 
+    // Check immediately in case the card mounts already in view
+    // (e.g. switching skill category tabs after the page has scrolled).
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className={`skill-container ${isVisible ? 'fade-in' : ''}`}>
+    <div
+      ref={tiltRef}
+      className={`skill-container ${isVisible ? 'fade-in' : ''}`}
+    >
       <div className="skill-header">
         <span className="skill-name">{name}</span>
         <span className="skill-percentage">{percentage}%</span>

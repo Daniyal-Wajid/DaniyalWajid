@@ -2,13 +2,9 @@
 
 import React, { useEffect, useState } from 'react';
 import PortfolioCard from './PortfolioCard';
+import SwipeDots from './SwipeDots';
+import { useSwipeIndex } from '../utils/useSwipeIndex';
 import { withBasePath } from '../utils/basePath';
-
-const orbiqe = withBasePath('/assets/portfolio/logo.png');
-const Rizzq = withBasePath('/assets/portfolio/rizzq.png');
-const Keeper = withBasePath('/assets/portfolio/Keeper.png');
-const FiveWorks = withBasePath('/assets/portfolio/fiveworks.png');
-const Todo = withBasePath('/assets/portfolio/todo.png');
 
 const Portfolio = () => {
   const [headingVisible, setHeadingVisible] = useState(false);
@@ -16,37 +12,58 @@ const Portfolio = () => {
   const [cardsVisible, setCardsVisible] = useState(Array(6).fill(false));
 
   const portfolioData = [
-    { 
-      title: 'Orbiqe Technologies', 
-      description: 'Innovative electrification solutions for a sustainable energy future.', 
-      link: 'https://linktoyourproject1.com',
-      image: orbiqe
-    },
-    { 
-      title: 'RIZZQ - Job Portal', 
-      description: 'A platform connecting job seekers and employers with advanced matching algorithms.', 
-      link: 'https://github.com/Daniyal-Wajid/Rizzq',
-      image: Rizzq
-    },
-    { 
-      title: 'Google Keep Clone', 
-      description: 'A user-friendly note and task organizer inspired by Google Keep.', 
-      link: 'https://github.com/Daniyal-Wajid/Keeper-App',
-      image: Keeper
-    },
-    { 
-      title: 'FiveWorks Dispatching Services', 
-      description: 'Optimizing logistics operations to enhance efficiency and reduce costs.', 
-      link: 'https://linktoyourproject5.com',
-      image: FiveWorks
-    },
-    { 
-      title: 'ToDo List App', 
-      description: 'Manage tasks effectively with features like deadlines and priority settings.', 
-      link: 'https://github.com/Daniyal-Wajid/Todo-List',
-      image: Todo
-    },
-  ];
+  {
+    title: 'HawkEye — AI Campus Monitoring',
+    description: 'AI-powered campus surveillance with real-time violation detection and alerts.',
+    link: 'https://github.com/Daniyal-Wajid/Hawkeye',
+    image: withBasePath('/assets/portfolio/Hawkeye.png'),
+    badge: '1st Place — Final Year Project',
+    tags: ['Python', 'YOLOv8', 'OpenCV', 'React.js', 'Node.js', 'MongoDB'],
+    stats: [
+      { value: '90.4%', label: 'mAP@50' },
+      { value: '91.8%', label: 'Recall' },
+      { value: '80.7%', label: 'Precision' },
+    ],
+  },
+  {
+    title: 'Attendify — Face Recognition Attendance',
+    description: 'Face recognition system for automated student attendance and tracking.',
+    link: 'https://github.com/Daniyal-Wajid/Attendify',
+    image: withBasePath('/assets/portfolio/Attendify.png'),
+    tags: ['Python', 'CNN', 'OpenCV', 'React.js', 'Node.js', 'MongoDB'],
+    stats: [
+      { value: '80%+', label: 'Recognition Accuracy' },
+      { value: '90%', label: 'Less Manual Effort' },
+    ],
+  },
+  {
+    title: 'ClassTrack — Exam Monitoring Platform',
+    description: 'RFID and AI-powered exam monitoring with real-time suspicious activity detection.',
+    link: 'https://github.com/Daniyal-Wajid/Classtrack',
+    image: withBasePath('/assets/portfolio/Classtrack.png'),
+    tags: ['Python', 'YOLOv8', 'OpenCV', 'RFID', 'React.js', 'Node.js'],
+    stats: [
+      { value: '80%+', label: 'Detection Accuracy' },
+      { value: '60%', label: 'Less Invigilation Effort' },
+    ],
+  },
+{
+  title: 'CodeSense',
+  description: 'AI-powered code analysis tool for detecting issues and suggesting smart improvements.',
+  link: 'https://github.com/Daniyal-Wajid/CodeSense',
+  image: withBasePath('/assets/portfolio/codesense.png'),
+  tags: ['Python', 'React.js', 'Node.js'],
+},
+{
+  title: 'Orbiqe Technologies',
+  description: 'Modern company website showcasing electrification solutions and engineering services.',
+  link: 'https://orbiqetech.com/',
+  image: withBasePath('/assets/portfolio/orbiqe.png'),
+  tags: ['React.js', 'Node.js', 'MongoDB'],
+},
+];
+
+  const { containerRef, activeIndex, scrollToIndex } = useSwipeIndex(portfolioData.length);
   
 
   useEffect(() => {
@@ -77,10 +94,10 @@ const Portfolio = () => {
 
   return (
     <div>
-      <div id='portfolio' style={{marginTop:"100px"}} className={`portfolio-heading ${headingVisible ? 'fade-in' : ''}`}>My Portfolio</div>
+      <div id='portfolio' className={`portfolio-heading ${headingVisible ? 'fade-in' : ''}`}>My Portfolio</div>
       <div className={`portfolio-subheading ${subheadingVisible ? 'fade-in' : ''}`}>Recent Work</div>
 
-      <div className="portfolio-grid">
+      <div className="portfolio-grid" ref={containerRef}>
         {portfolioData.map((item, index) => (
           <PortfolioCard
           key={index}
@@ -88,10 +105,14 @@ const Portfolio = () => {
           title={item.title}
           description={item.description}
           link={item.link}
-          image={item.image} // Make sure this line is included
+          image={item.image}
+          tags={item.tags}
+          badge={item.badge}
+          stats={item.stats}
         />        
         ))}
       </div>
+      <SwipeDots count={portfolioData.length} activeIndex={activeIndex} onDotClick={scrollToIndex} />
     </div>
   );
 }

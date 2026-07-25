@@ -3,6 +3,10 @@
 export function initializeCursor() {
   const cursor = document.getElementById("cursor");
   if (!cursor) return () => {};
+
+  const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+  if (isTouchDevice) return () => {};
+
   const speed = 0.1;
 
   function updateCursorPosition(e) {

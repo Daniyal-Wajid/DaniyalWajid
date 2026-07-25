@@ -46,7 +46,6 @@ const Sidebar = ({ isOpen, onClose }) => {
           <li onClick={() => scrollToSection('skills')}>My Skills</li>
           <li onClick={() => scrollToSection('portfolio')}>My Portfolio</li>
           <li onClick={() => scrollToSection('resume')}>My Resume</li>
-          <li onClick={() => scrollToSection('pricing')}>Pricing</li>
           <li onClick={() => scrollToSection('achievements')}>Achievements</li>
           <li onClick={() => scrollToSection('contact')}>Contact</li>
         </ul>

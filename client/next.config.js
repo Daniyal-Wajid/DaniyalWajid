@@ -5,7 +5,6 @@ const nextConfig = {
   output: "export",
 
   basePath: "/DaniyalWajid",
-  assetPrefix: "/DaniyalWajid/",
 
   eslint: {
     ignoreDuringBuilds: true,

@@ -28,13 +28,13 @@ const Header = () => {
       <div className='name'>
         <div className="intro">
           <span className="Heading">HELLO,</span>
-          <span style={{ color: "#6A9C89" }} className='Heading-2'>MY NAME IS</span>
+          <span style={{ color: "#6A9C89" }} className='Heading-2'>&nbsp;MY NAME IS</span>
         </div>
         <div className="name-details">
           <span style={{ color: "#6A9C89" }} className='Heading-name'>DANIYAL</span>
           <span className='Heading-name-2'>WAJID</span>
         </div>
-        <div className='subtitle'>I'm a Web Developer</div>
+        <div className='subtitle'>AI / ML &amp; Software Engineer</div>
         {isMobile && (
           <div className='img-container'>
             <div className='img-circle'>
@@ -43,7 +43,7 @@ const Header = () => {
           </div>
         )}
         <div className='additional-info'>
-          From Lahore, Pakistan: MERN Stack Developer with Rich Web Design Experience Ready to Collaborate on Unique Projects!
+          From Lahore, Pakistan: Gold Medalist Software Engineer passionate about Artificial Intelligence, Computer Vision, and modern web development — building intelligent applications that solve real-world problems.
         </div>
         <div className='social-links'>
           <a href="https://www.linkedin.com/in/daniyal-wajid" className='social-link' target="_blank" rel="noopener noreferrer">
@@ -57,7 +57,7 @@ const Header = () => {
           </a>
         </div>
         <div className='button-container'>
-          <a href="/Daniyal Wajid.pdf" className='button download-cv' download>Download CV</a>
+          <a href={withBasePath("/Daniyal Wajid.pdf")} className='button download-cv' download>Download CV</a>
           <button className='button my-skills'
             onClick={() => {
               const skillsSection = document.getElementById('skills');
