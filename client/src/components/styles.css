@@ -1223,8 +1223,8 @@ scale: 1.5;
 
 @media (max-width: 480px) {
   .portfolio-card {
-    min-height: 470px;
-    padding: 16px;
+    min-height: 340px;
+    padding: 14px;
   }
   .portfolio-card-image,
   .portfolio-card-image-placeholder {
