@@ -56,7 +56,7 @@ const Portfolio = () => {
 },
 {
   title: 'Orbiqe Technologies',
-  description: 'Modern company website showcasing electrification solutions and engineering services.',
+  description: 'Modern corporate website showcasing electrification solutions, engineering services, and innovative technology offerings with a responsive, user-friendly interface.',
   link: 'https://orbiqetech.com/',
   image: withBasePath('/assets/portfolio/orbiqe.png'),
   tags: ['React.js', 'Node.js', 'MongoDB'],
