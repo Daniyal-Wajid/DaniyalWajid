@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { withBasePath } from '../utils/basePath';
 
-const Daniyal = withBasePath('/assets/Daniyal.png');
+const Daniyal = withBasePath('/assets/DaniyalWajid.png');
 const LinkedInIcon = withBasePath('/assets/linkedin.png');
 const GitHubIcon = withBasePath('/assets/github.png');
 const InstagramIcon = withBasePath('/assets/instagram.png');
