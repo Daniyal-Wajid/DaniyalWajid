@@ -52,14 +52,14 @@ const Portfolio = () => {
   description: 'AI-powered code analysis tool for detecting issues and suggesting smart improvements.',
   link: 'https://github.com/Daniyal-Wajid/CodeSense',
   image: withBasePath('/assets/portfolio/CodeSense.png'),
-  tags: ['Python', 'React.js', 'Node.js'],
+  tags: ['Python', 'React.js', 'Node.js', 'Grok AI'],
 },
 {
   title: 'Orbiqe Technologies',
-  description: 'Modern corporate website showcasing electrification solutions, engineering services, and innovative technology offerings with a responsive, user-friendly interface.',
+  description: 'Modern corporate website showcasing electrification solutions, engineering services, and innovative technology offerings with a responsive, user-friendly design and optimized performance.',
   link: 'https://orbiqetech.com/',
   image: withBasePath('/assets/portfolio/orbiqe.png'),
-  tags: ['React.js', 'Node.js', 'MongoDB'],
+  tags: ['React.js', 'Node.js', 'MongoDB', 'Express'],
 },
 ];
 
