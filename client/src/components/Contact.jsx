@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-const CONTACT_EMAIL = 'daniyalwajid94@gmail.com';
+const CONTACT_EMAIL = 'daniyal.wajid12@gmail.com';
 
 const Contact = () => {
   const [headingVisible, setHeadingVisible] = useState(false);
@@ -52,36 +52,31 @@ const Contact = () => {
       <div className={`achievements-heading ${headingVisible ? 'fade-in' : ''}`}>Contact Me</div>
       <div className={`achievements-subheading ${headingVisible ? 'fade-in' : ''}`}>Let's Talk About Ideas</div>
       <div className="contact-content">
-        <div className={`contact-details ${detailsVisible ? 'fade-in' : ''}`}>
-          <div className="detail-item">
-            <span className="icon">📍</span>
-            <div>
-              <h3>Address</h3>
-              <p>Wapda Town, Lahore, Pakistan</p>
-            </div>
-          </div>
-          <div className="detail-item">
-            <span className="icon">💼</span>
-            <div>
-              <h3>Freelance</h3>
-              <p>Available Right Now</p>
-            </div>
-          </div>
-          <div className="detail-item">
-            <span className="icon">✉️</span>
-            <div>
-              <h3>Email</h3>
-              <p>{CONTACT_EMAIL}</p>
-            </div>
-          </div>
-          <div className="detail-item">
-            <span className="icon">📞</span>
-            <div>
-              <h3>Phone</h3>
-              <p>+92 309-1840367</p>
-            </div>
-          </div>
-        </div>
+<div className={`contact-details ${detailsVisible ? 'fade-in' : ''}`}>
+  <div className="detail-item">
+    <span className="icon">📍</span>
+    <div>
+      <h3>Address</h3>
+      <p>Wapda Town, Lahore, Pakistan</p>
+    </div>
+  </div>
+
+  <div className="detail-item">
+    <span className="icon">✉️</span>
+    <div>
+      <h3>Email</h3>
+      <p>{CONTACT_EMAIL}</p>
+    </div>
+  </div>
+
+  <div className="detail-item">
+    <span className="icon">📞</span>
+    <div>
+      <h3>Phone</h3>
+      <p>+92 309-1840367</p>
+    </div>
+  </div>
+</div>
         <form className={`contact-form ${formVisible ? 'fade-in' : ''}`} onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
