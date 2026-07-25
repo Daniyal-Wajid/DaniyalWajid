@@ -51,7 +51,7 @@ const Portfolio = () => {
   title: 'CodeSense',
   description: 'AI-powered code analysis tool for detecting issues and suggesting smart improvements.',
   link: 'https://github.com/Daniyal-Wajid/CodeSense',
-  image: withBasePath('/assets/portfolio/codesense.png'),
+  image: withBasePath('/assets/portfolio/CodeSense.png'),
   tags: ['Python', 'React.js', 'Node.js'],
 },
 {
